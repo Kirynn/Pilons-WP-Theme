@@ -1,0 +1,100 @@
+@import '../globals';
+
+.footer {
+    
+    background-color: white;
+    padding: 50px 0;
+    position: relative;
+    color: grey;
+    display: block;
+    font-size: 14px;
+    overflow: hidden;
+    
+    .col-xs-8, .col-xs-4 {
+
+        height: 100px;
+
+        ul {
+
+            position: absolute;
+            bottom: 21%;
+        }
+    }
+    
+    .nav {
+        
+        li > a {
+            
+            padding: 0;
+            margin: 0;
+            color: grey;
+        }
+        
+        li > a:hover, a:focus {
+
+            background: none;
+            color: auto;
+            padding: 0;
+
+        }
+    }
+    
+    div {
+        
+        h2 {
+            
+            margin-bottom: 0;
+        }
+        
+        h3 {
+            
+            margin-top: 0;
+        }
+    }
+    
+    .nav-footer {
+        
+        li > a:hover, a:focus {
+            
+            text-decoration: underline;
+        }
+    }
+    
+    .nav-social {
+
+        li {
+
+            float: left;
+            
+            &:first-child > a {
+                
+                padding-right: 5px;
+            }
+            
+            &:last-child > a {
+                
+                padding-left: 5px;
+            }
+        }
+        
+        li > a:hover, a:focus {
+            
+            #facebook {
+                
+                color: #3b5998;
+            } 
+            
+            #twitter {
+                
+                color: #55ACEE
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    
+    .footer {
+        
+    }
+}

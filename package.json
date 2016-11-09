@@ -1,0 +1,15 @@
+{
+    "scripts": {
+        "scss": "node-sass --output-style compressed -o ./ src/scss",
+        "autoprefix": "postcss -u autoprefixer -r style.css",
+        "build:css": "npm run scss && npm run autoprefix",
+        "watch:css": "nodemon -e scss -x \"npm run build:css\"",
+        "start": "npm run watch:css"
+    },
+    "devDependencies": {
+        "node-sass": "^3.8.0",
+        "postcss-cli": "^2.6.0",
+        "autoprefixer": "^6.4.0",
+        "nodemon": "^1.10.2"
+    }
+}

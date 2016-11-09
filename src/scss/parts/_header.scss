@@ -1,0 +1,257 @@
+@import '../globals';
+
+.navbar {
+    
+    position: relative;
+    min-height: 50px;
+    z-index: 1000;
+    background-color: white;
+    font-size: 18px;
+    
+    .navbar-header {
+        
+        margin: 0 -15px;
+        min-height: 50px;
+        
+        .navbar-brand {
+            
+            float: left;
+            height: 50px;
+            padding: 15px;
+            font-size: 20px;
+            line-height: 22px;
+            cursor: pointer;
+            color: $primary-color;
+        }
+        
+        .navbar-toggle {
+            
+            position: relative;
+            float: right;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            padding: 9px 10px;
+        }
+    }
+    
+        
+    .navbar-collapse {
+        
+        padding: 0 15px;
+        margin: 0 -15px;
+        overflow-y: hidden;
+        
+        .navbar-nav {
+            
+            margin: 7.5px -15px;
+            
+            li {
+                
+                position: relative;
+                display: block;
+                
+                a {
+                    
+                    padding: 10px 15px;
+                    line-height: 20px;
+                    position: relative;
+                    display: block;
+                    line-height: 20px;
+                }
+                
+                ul {
+                    
+                    li {
+                
+                        position: relative;
+                        display: block;
+                
+                        a {
+                    
+                            padding: 10px 15px;
+                            line-height: 20px;
+                            position: relative;
+                            display: block;
+                            line-height: 20px;
+                            
+                            &:hover, &:active {
+                                
+                                text-decoration: none;
+                                background-color: #eee;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            label {
+                
+                input[type='text'] {
+
+                    position: relative;
+                    display: block;
+                    float: left;
+                    width: 93%;
+                    margin-left: 15px;
+                }
+            }
+                
+            i {
+                
+                line-height: 23px;
+                position: relative;
+                padding-left: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .navbar {
+        
+        .navbar-header {
+        
+            margin-left: 0;
+            margin-right: 0;
+            min-height: 0;
+        
+            .navbar-brand {
+            
+                margin-left: -15px;
+            }
+                  
+            .navbar-toggle {
+        
+                display: none;
+            }
+        }
+        
+        .navbar-collapse {
+            
+            margin: 0;
+            padding: 0;
+            display: block !important;
+            height: 50px;
+            width: auto;
+            overflow: visible;
+            
+            .navbar-nav {
+
+                float: left;
+                margin: 0;
+
+                li {
+
+                    float: left;
+                    
+                    &:hover {
+                        
+                        ul {
+                            
+                            display: block;
+                        }
+                    }
+
+                    a, label {
+
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                    }
+                    
+                    ul {
+                        
+                        position: absolute;
+                        padding: 0;
+                        display: none;
+                        
+                        li {
+                            
+                            background: #eee;
+                            position: relative;
+                            display: block;
+                            
+                            a {
+                    
+                                padding: 10px 15px;
+                                line-height: 20px;
+                                position: relative;
+                                display: block;
+                                line-height: 20px;
+
+                                &:hover, &:active {
+
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                label {
+                    
+                    display: inline-block;
+                    position: relative;
+                    height: 20px;
+                    width: 20px;
+                    border: 1px solid #FF6600;
+                    border-radius: 25px;
+                    transition: all 200ms ease;
+                    cursor: text;
+                    margin-top: 15px;
+                    
+                    	&:after {
+                        
+                            content: "";
+                            position: absolute;
+                            width: 1px;
+                            height: 10px;
+                            right: -2px;
+                            top: 15px;
+                            background: #FF6600;
+                            border-radius: 3px;
+                            transform: rotate(-45deg);
+                            transition: all 200ms ease;
+                        }
+                    
+                    	&.active, &:hover {
+                            
+                            width: 200px;
+                            margin-right: 0px;
+                            border-radius: 0;
+
+                            &:after {
+                                
+                                height: 0px;	
+                            }
+                        }
+                    
+                    input[type='text'] {
+                        
+                        float: right;
+                        width: 100%;
+                        border: none;
+                        color: inherit;
+                        background: transparent;
+                        outline-width: 0px;
+                        position: absolute;
+                        top: -2px;
+                        margin: 0;
+                    }                    
+                }
+                
+                i {
+                        
+                    display: none;
+                }
+            }
+        
+            .navbar-right {
+        
+                float: right;
+            }
+        }
+    }
+}

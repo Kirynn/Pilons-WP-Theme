@@ -1,0 +1,154 @@
+@import '../globals';
+
+.blog-posts {
+    
+    position: relative;
+    
+    .blog-tile {
+        
+        margin: 1.5rem auto;
+        float: none;
+        position: relative;
+        width: 75%;
+        height: 270px;
+        
+        a {
+            
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            
+            .blog-tile-metadata {
+                
+                color: white;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 35%;
+                background: $dark-background-color;
+                padding: 1.5rem;
+                
+                & > span {
+                        
+                    display: block;
+                }
+
+                .meta-catergory {
+
+                    font-size: 12px;
+                    color: $primary-color;
+                    text-transform: uppercase;
+                }
+
+                .meta-date {
+
+                    font-size: 12px;
+                }
+
+                .meta-title {
+
+                    font-size: 18px;
+                    margin-top: 0.5rem;
+                }
+
+            }
+            
+            .blog-tile-pic {
+                
+                height: 65%;
+                background-origin: content-box;
+                background-position: center center;
+                background-size: 100% 100%;
+                background-color: $primary-color;
+            }
+        }
+    }
+    
+    @media(min-width: 1024px) {
+        
+        .blog-tile {
+            
+            width: 980px;
+            height: 380px;
+            
+            a {
+                
+                &:hover {
+            
+                    .blog-tile-metadata::before {
+
+                        padding: 0.5rem 0 0.5rem 0.5rem;
+                        margin: -0.5rem 0 -0.5rem -0.5rem;
+                        box-shadow: 0 25.5px 35px -24.5px rgba(0,0,0,0.3);
+                    }
+
+                    .blog-tile-pic::before {
+
+                        padding: 0.5rem 0.5rem 0.5rem 0;
+                        margin: -0.5rem -0.5rem -0.5rem 0;
+                        box-shadow: 0 25.5px 35px -24.5px rgba(0,0,0,0.3);
+                    }
+                }
+                
+                .blog-tile-metadata {
+                    
+                    width: 20%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: auto;
+                    
+                    &::before {
+                        
+                        transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+                        box-sizing: content-box;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        z-index: -1;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        background: $dark-background-color;
+                    }
+                    
+                    .meta-title {
+                        
+                        margin-top: 2rem;
+                    }
+                }
+                
+                .blog-tile-pic {
+                    
+                    width: 80%;
+                    height: 100%;
+                    right: 0;
+                    z-index: -5;
+                    background-size: 0% 0%;
+                    position: absolute;
+                    
+                    &::before {
+                        
+                        background-size: 105%;
+                        transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+                        box-sizing: content-box;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        z-index: -1;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        background-image: inherit;
+                        background-color: inherit;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-origin: content-box;
+                        backgroind-size: 105%;
+                    }
+                }
+            }
+        }
+    }
+}

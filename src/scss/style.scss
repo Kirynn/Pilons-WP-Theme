@@ -1,0 +1,38 @@
+@import 'globals';
+
+@import 'parts/header';
+@import 'parts/footer';
+@import 'parts/blog';
+@import 'parts/single-post';
+@import 'parts/page';
+@import 'parts/team-members';
+@import 'parts/vex-seasons';
+    
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+body {
+    
+    background-color: $background-color;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    
+    margin-bottom: 100px;
+}
+
+a {
+    
+    color: $link-color;
+    
+    &:hover {
+        
+        color: $primary-color;
+    }
+    
+    &::before, &::after {
+        
+        display: inline-block;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,92 @@
+@import '../globals';
+
+#team-members {
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+    .row {
+        
+        display: flex;
+        flex-wrap: nowrap;
+    
+        .card {
+
+            box-shadow: 1px 1px 15px 2px rgba(0, 0, 0, 0.3);
+            padding: 0;
+            margin: 2rem;
+            flex: 1 1 auto;
+
+            .member-picture {
+
+                width: 100%;
+                height: 150px;
+                background-color: $primary-color;
+                background-size: cover;
+                background-position: center center;
+                background-origin: content-box;
+                background-repeat: no-repeat;
+            }
+
+            .member-name {
+
+                background: $primary-color;
+                width: 100%;
+                color: white;
+                padding: 1rem;
+                font-size: 16px;
+                display: block;
+                position: relative;
+            }
+
+            .member-bio {
+
+                padding: 1rem;
+                display: block;
+                position: relative;
+                background: white;
+
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    
+    #team-members {
+        
+        .row {
+            
+            .card {
+                
+                .member-pic {
+                        
+                    &::before {
+                            
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        background: rgba(0, 0, 0, 0.5);
+                        opacity: 0;
+                        transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+                    }
+                }
+                
+                &:hover {
+                    
+                    .member-pic {
+                        
+                        &::before {
+                            
+                            opacity: 1; 
+                        }
+                    }
+                                        
+                    .member-name {
+                        
+                    }
+                }
+            }
+        }
+    }
+}
