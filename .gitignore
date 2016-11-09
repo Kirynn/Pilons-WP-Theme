@@ -69,3 +69,10 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+# =========================
+# OTHER
+# =========================
+
+*.zip
